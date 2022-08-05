@@ -14,9 +14,11 @@ body{
     font-size: 100px;
     text-shadow: 1.5px 1.5px 5px rgb(243, 195, 122);
     vertical-align: middle;
+    text-shadow: .5px .5px  black;
 }
 
 .row {
     align-content: center;
     text-align: center;
 }
+
