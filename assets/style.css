@@ -1,0 +1,14 @@
+.welcome-page-name {
+    font-family: 'Brush Script MT';
+    text-align: center;
+    font-variant: small-caps;
+    color:rgb(111, 111, 158);
+    font-weight: 600;
+    font-size: 100px;
+    text-shadow: 1.5px 1.5px 5px rgb(243, 195, 122);
+}
+
+
+#buttons {
+    justify-content: center;
+}
