@@ -1,3 +1,10 @@
+body{
+    background-image: url("images/jaxhomepage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 10%;
+}
 .welcome-page-name {
     font-family: 'Brush Script MT';
     text-align: center;
@@ -6,9 +13,10 @@
     font-weight: 600;
     font-size: 100px;
     text-shadow: 1.5px 1.5px 5px rgb(243, 195, 122);
+    vertical-align: middle;
 }
 
-
-#buttons {
-    justify-content: center;
+.row {
+    align-content: center;
+    text-align: center;
 }
