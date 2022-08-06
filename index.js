@@ -1,3 +1,3 @@
-document.getElementById("continue-as-guest").onclick = function (){
-    location.href = 'pictures.html'
-}
+document.getElementById("continue-as-guest").onclick = function () {
+  location.href = "pictures.html";
+};
