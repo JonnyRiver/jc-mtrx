@@ -1,7 +1,3 @@
-document.getElementById("continue-as-guest").onclick = function () {
-  location.href = "pictures.html";
-};
-
 var gallery = document.querySelector("#gallery");
 var getVal = function (elem, style) {
   return parseInt(window.getComputedStyle(elem).getPropertyValue(style));
