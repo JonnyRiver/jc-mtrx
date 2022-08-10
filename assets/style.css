@@ -114,7 +114,7 @@ body {
   left: 50%;
   transform: translate3d(0, 0, 0);
   animation: zoomin 1s ease;
-  max-height: 1350px;
+  max-height: 1120px;
   margin: auto;
 }
 .byebye {
