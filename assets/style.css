@@ -4,11 +4,11 @@
 }
 body {
   background-image: url("images/jaxhomepage.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: 10%;
 }
+
 .welcome-page-name {
   font-family: "Brush Script MT";
   text-align: center;
