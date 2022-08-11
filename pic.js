@@ -21,3 +21,7 @@ gallery.querySelectorAll(".gallery-item").forEach(function (item) {
     item.classList.toggle("full");
   });
 });
+
+document.getElementById("next-page").onclick = function () {
+  location.href = "pics2.html";
+};

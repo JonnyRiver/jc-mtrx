@@ -1,12 +1,11 @@
-.hero {
-  background-image: url("images/jaxhomepage.jpg");
-  opacity: 0.75;
-}
 body {
-  background-image: url("images/jaxhomepage.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 10%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("images/jaxhomepage.jpg");
+  background-size: 2900px 1600px;
+  background-repeat: no-repeat;
 }
 
 .welcome-page-name {
@@ -135,7 +134,7 @@ body {
   left: 50%;
   transform: translate3d(0, 0, 0);
   animation: zoomin 1s ease;
-  max-height: 1350px;
+  max-height: 1120px;
   margin: auto;
 }
 .byebye {
