@@ -1,14 +1,13 @@
-.hero {
-  background-image: url("images/jaxhomepage.jpg");
-  opacity: 0.75;
-}
 body {
-  background-image: url("images/jaxhomepage.jpg");
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("images/jaxhomepage.jpg");
+  background-size: 2900px 1600px;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 10%;
 }
+
 .welcome-page-name {
   font-family: "Brush Script MT";
   text-align: center;
