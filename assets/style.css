@@ -7,8 +7,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: 10%;
-  background-color: rgba(250, 150, 250, 0.5);
-  background-blend-mode: luminosity;
 }
 
 .welcome-page-name {
