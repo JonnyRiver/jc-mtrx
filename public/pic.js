@@ -26,6 +26,6 @@ document.getElementById("next-page").onclick = function () {
   location.href = "pics2.html";
 };
 
-document.getElementByClass("last-page").onclick = function () {
+document.getElementById("last-page").onclick = function () {
   location.href = "pics.html";
 };
