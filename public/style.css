@@ -13,11 +13,10 @@
 }
 
 .container {
-  height: 98vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   justify-content: center;
   align-items: center;
+  padding: 12em;
 }
 
 .board {
@@ -76,9 +75,36 @@ body {
     ),
     url(images/jaxhomepage.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: var(--color-dark);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: (var(--color-light));
+  color: white;
 }
 
 /*--body {
@@ -98,7 +124,7 @@ body {
   font-variant: small-caps;
   color: #34e7e4;
   font-weight: 600;
-  font-size: 400px;
+  font-size: 300px;
   text-shadow: 10px 10px 1px black;
   vertical-align: middle;
 }
@@ -132,11 +158,11 @@ body {
 .wrapper {
   font-family: cursive;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  gap: 5px;
+  grid-template-columns: 270px 270px 270px 270px;
+  column-gap: 100px;
   text-align: center;
-  margin-top: auto;
+  justify-content: space-around;
+  margin: 24%;
 }
 
 .grid-item {
@@ -144,6 +170,7 @@ body {
   opacity: 0.75;
   border-color: black;
   border-style: groove;
+  border-radius: 8px;
 }
 .grid-item-1 {
   grid-column: 1;
@@ -166,8 +193,14 @@ body {
 }
 
 .footer {
-  align-content: center;
+  background: var(--color-light);
+  width: auto;
+  padding: 20px 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
 /*---Picture page styles---*/
 
 h1 {
@@ -322,5 +355,12 @@ body {
   100% {
     max-width: 100%;
     transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .welcome-page-name {
+    color: red;
+    font-size: 100%;
   }
 }
