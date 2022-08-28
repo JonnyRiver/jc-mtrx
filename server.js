@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname));
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
