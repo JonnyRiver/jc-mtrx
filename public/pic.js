@@ -25,3 +25,7 @@ gallery.querySelectorAll(".gallery-item").forEach(function (item) {
 document.getElementById("next-page").onclick = function () {
   location.href = "pics2.html";
 };
+
+document.getElementById("last-page").onclick = function () {
+  location.href = "pics.html";
+};
