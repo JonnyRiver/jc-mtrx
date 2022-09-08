@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DisMyBaby Jaxson</title>
-    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="welcome-page-name">Jaxson</header>
     <div class="container">
-        <h1 class="login-page-name">Login</h1>
-        <div class="row">
-            <label for="username-textbox">username:</label>
-            <input class="input" id="username-textbox" type="text">
-        </div>
-        <div class="row">
-            <label for="password-textbox">password:</label>
-            <input class="input" id="password-textbox" type="text">
-        </div>
-        <div class="row">
-            <button class="button" id="attempt-login" type="button">Login</button>
-            <button class="button" id="register-login" type="button">Register</button>
-            <button class="button" id="forgot-login" type="button">Forgot</button>
-        </div>
+      <div class="row">
+        <form>
+          <label for="input-username">Username:</label>
+          <input type="text" id="input-username" name="input-username" placeholder="JaxsonMartin" autofocus required><br>
+          <label for="input-password">Password:</label>
+          <input type="text" id="input-password" name="input-password" placeholder="ILoveDaddy123" req>
+        </form>
+      </div>
+      <div class="row">
+        <button class="button" id="attempt-login" type="button">Login</button>
+        <button class="button" id="attempt-signup" type="button">Sign Up</button>
+        <button class="button" id="attempt-forgot" type="button">I Forgot</button>
+      </div>
     </div>
-    <script src="/login.js" type="module"></script>
+    <script src="login.js"></script>
   </body>
   <footer class="footer">Established 2022</footer>
 </html>
+ 

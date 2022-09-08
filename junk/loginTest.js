@@ -1,4 +1,4 @@
-import { client } from "./server";
+import { client } from "../server";
 
 
 document.getElementById("attempt-login").onclick = function () {
@@ -22,7 +22,8 @@ document.getElementById("attempt-login").onclick = function () {
     })
   };
   
-
+// learn about exports! 
+// while youre at it learn about imports too!
 //module.exports = {client}
 // module.exports = {
 //     

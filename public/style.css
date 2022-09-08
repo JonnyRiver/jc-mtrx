@@ -73,7 +73,8 @@ body {
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url(images/jaxhomepage.jpg) no-repeat center center fixed;
+    url(/assets/images/jaxhomepage.jpg) no-repeat center center fixed;
+    /*url(images/jaxhomepage.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   background-size: cover;
 }
