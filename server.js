@@ -1,5 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
+//const mongoose = require("mongoose");
 const compression = require("compression");
 
 const PORT = process.env.PORT || 3001;
@@ -17,9 +17,20 @@ app.listen(PORT, () => {
   console.log("APP RUNNIN ON PORT 3001!!!!!!!!");
 });
 
-//mongoose.connect(MONGODB_URI, {
-//  useNewUrlParser: true,
-//  useFindAndModify: false,
-//});
+
+
+// new mongo stuff
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.rqg9kbv.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  console.log('connected to jaxson database!')});
+
+
+
+
+
+
+
 
 //app.use(require("./routes/api.js"));

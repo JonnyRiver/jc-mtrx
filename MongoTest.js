@@ -33,3 +33,4 @@ client.connect(err => {
 });
 // this never closes it? it just stays open? weird.
 client.close();
+console.log('it has been closed');
