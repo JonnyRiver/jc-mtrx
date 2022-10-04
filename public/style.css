@@ -16,12 +16,11 @@
   display: grid;
   justify-content: center;
   align-items: center;
-  padding: 12em;
+  padding: 5em;
 }
 
 .board {
   max-width: 987px;
-  width: 100%;
   background-color: var(--color-dark);
   text-align: center;
   border-radius: 8px;
@@ -163,15 +162,16 @@ body {
 }
 
 .button {
-  font-size: 40px;
-  margin: 50px;
+  font-size: 25px;
+  margin: 40px;
   border-radius: 10px;
   background-color: whitesmoke;
   font-family: cursive;
   cursor: pointer;
-  padding: 20px;
+  padding: 10px;
+  background-color: lightskyblue;
 }
-.nav-item {
+.nav-items {
   vertical-align: center;
 }
 
@@ -190,7 +190,7 @@ body {
   column-gap: 100px;
   text-align: center;
   justify-content: space-around;
-  margin: 24%;
+  margin: 19rem;
 }
 
 .grid-item {
@@ -261,7 +261,7 @@ body {
   left: 50%;
   transform: translate3d(0, 0, 0);
   animation: zoomin 1s ease;
-  max-height: 1120px;
+  max-height: 755px;
   margin: auto;
 }
 .byebye {
