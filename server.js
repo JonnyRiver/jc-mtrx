@@ -1,10 +1,7 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const compression = require("compression");
 
 const PORT = process.env.PORT || 3001;
-//const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost";
-
 const app = express();
 
 app.use(express.static(__dirname + "/public"));
@@ -17,9 +14,12 @@ app.listen(PORT, () => {
   console.log("APP RUNNIN ON PORT 3001!!!!!!!!");
 });
 
-//mongoose.connect(MONGODB_URI, {
-//  useNewUrlParser: true,
-//  useFindAndModify: false,
-//});
 
-//app.use(require("./routes/api.js"));
+// new mongo stuff
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.rqg9kbv.mongodb.net/?retryWrites=true&w=majority";
+module.exports = {
+  connectToClient: function() {
+    new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 })
+  } 
+} 

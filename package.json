@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/JonnyRiver/jc-mtrx#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "compression": "^1.7.4",
     "express": "^4.18.1",
     "mongodb": "^4.8.1",
-    "mongoose": "^6.5.1",
+    "mongoose": "^6.5.4",
     "mongosh": "^1.5.4",
     "morgan": "^1.10.0",
     "node": "^16.17.0"
