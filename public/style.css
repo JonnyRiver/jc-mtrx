@@ -20,7 +20,7 @@
 }
 
 .board {
-  max-width: 987px;
+  max-width: 100%;
   background-color: var(--color-dark);
   text-align: center;
   border-radius: 8px;
@@ -48,8 +48,9 @@
   padding: 1.5em 2em;
   width: 50%;
   border-radius: 5px;
-  font-size: 0.9em;
+  font-size: 1.5em;
   position: relative;
+  margin: 1.5em;
 }
 
 .swiper .swiper-slide .comments::after {
@@ -95,12 +96,17 @@
   z-index: 10;
 }
 
+.comment-from {
+  color: white;
+  padding: 10px;
+}
+
 body {
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url(/assets/images/jaxhomepage.jpg) no-repeat center center fixed;
+    url(/images/jaxhomepage.jpg) no-repeat center center fixed;
     /*url(images/jaxhomepage.jpg) no-repeat center center fixed;*/
   -webkit-background-size: cover;
   background-size: cover;
@@ -187,11 +193,12 @@ body {
 .wrapper {
   font-family: cursive;
   display: grid;
-  grid-template-columns: 270px 270px 270px 270px;
+  grid-template-columns: 270px 225px;
   column-gap: 100px;
   text-align: center;
   justify-content: space-around;
-  margin: 19rem;
+  margin: 15rem;
+  row-gap: 50px;
 }
 
 .grid-item {
@@ -413,4 +420,26 @@ body {
     color: red;
     font-size: 100%;
   }
+}
+
+
+
+input{
+  font-family: 'Helvetica', serif;
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid #767474;
+}
+input[type=submit] {
+  font-family: 'Helvetica', serif;
+  width: 100%;
+  background-color: #767474;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  border-radius: 10px;
 }

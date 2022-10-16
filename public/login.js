@@ -1,6 +1,10 @@
-function userSignUp(newUsername, newPassword) {
+const mongoose = require ('mongoose');
+
+
+function userSignUp(newUser, newPassword) {
     //write/add user to db 
     // check if username already exists first, if not then add, if yes then terminate.
+    
     console.log('user sign up selected!');    
 }
 
@@ -11,12 +15,12 @@ document.getElementById("attempt-login").onclick = function () {
     if (usernameLength > 3 && passwordLength > 0){
         let usernameValue = document.getElementById("input-username").value;
         let passwordValue = document.getElementById("input-password").value;
-        var mongoClient = require("server");
+        var mongoClient = require("./server");
 
         mongoClient.connectToClient(err => {
             if (err) {throw err}
             console.log('connected to db!');
-            const collection = client.db("jaxson").collection("users");
+            const collection = client.db("Jaxson").collection("users");
             collection.findOne({}, function(err, result) {
                 if (err) throw err;
                 if (usernameValue === result.username && passwordValue === result.password) {
@@ -32,3 +36,4 @@ document.getElementById("attempt-login").onclick = function () {
 
 
 
+module.exports = mongoose.model('User', UserSchema);

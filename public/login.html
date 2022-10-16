@@ -18,13 +18,37 @@
           <input type="text" id="input-password" name="input-password" placeholder="ILoveDaddy123" req>
         </form>
       </div>
+
+      <div class="col-md-6 main">
+                      
+        <form action="/sign_up" method="post">
+                  
+        <h1> Signup form </h1>
+                          
+        <input class="box" type="text" name="name" id="name" 
+        placeholder="Name"  required /><br>
+                          
+        <input class="box" type="email" name="email" id="email" 
+        placeholder="E-Mail " required /><br>
+                          
+        <input class="box" type="password" name="password" 
+        id="password" placeholder="Password " required/><br>
+                          
+        <input type="submit" id="submitDetails"  
+        name="submitDetails" value="Submit" /><br>
+                  
+        </form>
+                  
+    </div>
+
       <div class="row">
         <button class="button" id="attempt-login" type="button">Login</button>
         <button class="button" id="attempt-signup" type="button">Sign Up</button>
         <button class="button" id="attempt-forgot" type="button">I Forgot</button>
       </div>
     </div>
-    <script src="login.js"></script>
+    <script src="server.js"></script>
+    <script src="index.js" ></script>
   </body>
   <footer class="footer">Established 2022</footer>
 </html>

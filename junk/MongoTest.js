@@ -15,7 +15,7 @@
 // testing
 console.log('initializing....');
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://m001-student:PASSWORD@sandbox.rqg9kbv.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://jonnyriver:ccymhjoTj2amivWR@cluster0.oquqv.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 client.connect(err => {
   console.log('connected to jaxson database!');
@@ -24,7 +24,7 @@ client.connect(err => {
   console.log('looking for a user...');
   collection.findOne({}, function(err, result) {
     if (err) throw err;
-    console.log('username: ', result.username);
+    console.log('username: ', result.user);
     console.log('password: ', result.password);
   })
   

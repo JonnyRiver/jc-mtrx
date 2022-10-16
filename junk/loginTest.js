@@ -1,11 +1,11 @@
-import { client } from "../server";
+import { user } from "../server.js";
 
 
 document.getElementById("attempt-login").onclick = function () {
     console.log('login button clicked, automatically logging you in...');
     client.connect(err => {
         console.log('connected to jaxson database!');
-        const collection = client.db("jaxson").collection("users");
+        const collection = user.db("jaxson").collection("users");
         inputUsername = alert("please enter your username");
         inputPassword = alert("please enter your password");
         console.log('looking for your login info. please wait...');
@@ -22,11 +22,6 @@ document.getElementById("attempt-login").onclick = function () {
     })
   };
   
-// learn about exports! 
-// while youre at it learn about imports too!
-//module.exports = {client}
-// module.exports = {
-//     
-// }
+
 
 

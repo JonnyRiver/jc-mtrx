@@ -1,10 +1,10 @@
 var mongoose = require(mongoose),
-User = require('./user-model-junk');
+User = require('/user-model-junk');
 
 console.log('connecting to mongo....');
 
 // fill this in with mongo atlas uri
-var uri = 'mongodb+srv://m001-student:m001-mongodb-basics@sandbox.rqg9kbv.mongodb.net/?retryWrites=true&w=majority';
+var uri = "mongodb+srv://jonnyriver:ccymhjoTj2amivWR@cluster0.oquqv.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(uri, function(err) {
     if (err) throw err;
     console.log('Successfully connected to mongodb');
