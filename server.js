@@ -1,7 +1,7 @@
 const express = require("express");
 const compression = require("compression");
 const { MongoClient } = require("mongodb");
-const uri = ('mongodb+srv://jonnyriver:ccymhjoTj2amivWR@cluster0.oquqv.mongodb.net/?retryWrites=true&w=majority')
+const uri = ('')
 const uuid = require('uuid').v4;
 const app = express();
 
