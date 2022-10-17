@@ -1,7 +1,8 @@
+require('dotenv').config();
+const uri = process.env.MONGO_URI;
 const express = require("express");
 const compression = require("compression");
 const { MongoClient } = require("mongodb");
-const uri = ('')
 const uuid = require('uuid').v4;
 const app = express();
 
