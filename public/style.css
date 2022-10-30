@@ -117,10 +117,12 @@ body {
   background-color: var(--color-dark);
   overflow: hidden;
   border-radius: 8px;
+  position: sticky; top: 0px;
+  z-index: 99;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+.topnav a { 
   float: left;
   color: #f2f2f2;
   text-align: center;

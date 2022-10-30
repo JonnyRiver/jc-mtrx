@@ -6,6 +6,7 @@ const { MongoClient } = require("mongodb");
 const uuid = require('uuid').v4;
 const app = express();
 
+
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/assets"));
 app.use(compression());
@@ -57,15 +58,14 @@ app.post('/sign_up', function (req, res) {
       // Ensures that the client will close when you finish/error
       client.close();
    }
-   
+
    return res.redirect('navigate.html');
-})
+}).listen(3000);
 
-app.get('/', function (req, res) {
-   res.set({
-      'Access-control-Allow-Origin': '*'
-   });
-   return res.redirect('index.html');
-}).listen(3000)
 
-console.log("server listening at port 3000");
+// app.get('/sign_up', function (req, res) {
+//    res.render({
+//       'Access-control-Allow-Origin': '*'
+//    });
+//    return res.redirect('index.html');
+// }).listen(3000);
