@@ -49,11 +49,12 @@ app.post('/sign_up', function (req, res) {
            if (signup_email == result[0].email) {
               console.log(`email address, ${signup_email} already exists - ignoring signup - redirecting to login`)
               return res.redirect('login.html'); }}
-         else {
-            console.log(`no record found for email: ${signup_email}. adding to database...`)
-            db.collection('Jaxson.users').insertOne(data, function (err) {
-               if (err) throw err;
-               console.log("Record inserted Successfully");
+              else {
+                 console.log(`no record found for email: ${signup_email}. adding to database...`)
+                 db.collection('Jaxson.users').insertOne(data, function (err) {
+                    if (err) throw err;
+                    console.log("Record inserted Successfully");
+                    return res.redirect('navigate.html');
             });
          }});
    } finally {
