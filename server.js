@@ -35,37 +35,31 @@ app.post('/sign_up', function (req, res) {
       _id: uuid(),
       "name": signup_name,
       "email": signup_email,
-      "password": signup_pass
-   }
+      "password": signup_pass }
    console.log(`user name = ${signup_name}`);
    console.log(`user email = ${signup_email}`);
    console.log(`user password = ${signup_pass}`);
    const client = new MongoClient(uri);
    try {
       const db = client.db('Jaxson');
-      // const users = db.collections('Jaxson.users');
-      // db.collection('Jaxson.users').insertOne(data, function (err) {
-      //    if (err) throw err;
-      //    console.log("Record inserted Successfully");
-      // });
-      // var query = {"email": data.signup_email}
-      var query = {"email": "corey@email.com"}
-      db.collection("Jaxson.users").find(query).toArray(function(err, result) {
+      db.collection("Jaxson.users").find({"email": String(signup_email)}).toArray(function(err, result) {
         if (err) throw err;
-        console.log(result);});
-      // var emailExists = users.findOne({"email": email});
-      // if (emailExists) {
-      //    console.log(`${email} used for existing user`)
-      // }
-      // else {
-      //    console.log(`${email} not found in database, continue to add user`)
-      // }
+        if (result.length > 0) {
+           console.log(`name= ${result[0].name}, email = ${result[0].email}, password = ${result[0].password}`);
+           if (signup_email == result[0].email) {
+              console.log(`email address, ${signup_email} already exists - ignoring signup - redirecting to login`)
+              return res.redirect('login.html'); }}
+         else {
+            console.log(`no record found for email: ${signup_email}. adding to database...`)
+            db.collection('Jaxson.users').insertOne(data, function (err) {
+               if (err) throw err;
+               console.log("Record inserted Successfully");
+            });
+         }});
    } finally {
       // Ensures that the client will close when you finish/error
       client.close();
    }
-   
-   return res.redirect('navigate.html');
 }).listen(3000);
 
 
