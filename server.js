@@ -13,14 +13,11 @@ app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
-
 async function run() {
    const client = new MongoClient(uri);
    try {
       const database = client.db('Jaxson');
       const users = database.collection('users');
-
    } finally {
       // Ensures that the client will close when you finish/error
       await client.close();
@@ -30,35 +27,28 @@ async function run() {
 run().catch(console.dir);
 
 
-
-
 app.post('/sign_up', function (req, res) {
    var name = req.body.name;
    var email = req.body.email;
    var pass = req.body.password
-
    var data = {
-
       _id: uuid(),
       "name": name,
       "email": email,
       "password": pass
    }
-
    const client = new MongoClient(uri);
    try {
       const db = client.db('Jaxson');
-
       db.collection('Jaxson.users').insertOne(data, function (err) {
          if (err) throw err;
          console.log("Record inserted Successfully");
       });
-
    } finally {
       // Ensures that the client will close when you finish/error
       client.close();
    }
-
+   
    return res.redirect('navigate.html');
 }).listen(3000);
 
