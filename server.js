@@ -28,22 +28,38 @@ run().catch(console.dir);
 
 
 app.post('/sign_up', function (req, res) {
-   var name = req.body.name;
-   var email = req.body.email;
-   var pass = req.body.password
+   var signup_name = req.body.name;
+   var signup_email = req.body.email;
+   var signup_pass = req.body.password
    var data = {
       _id: uuid(),
-      "name": name,
-      "email": email,
-      "password": pass
+      "name": signup_name,
+      "email": signup_email,
+      "password": signup_pass
    }
+   console.log(`user name = ${signup_name}`);
+   console.log(`user email = ${signup_email}`);
+   console.log(`user password = ${signup_pass}`);
    const client = new MongoClient(uri);
    try {
       const db = client.db('Jaxson');
-      db.collection('Jaxson.users').insertOne(data, function (err) {
-         if (err) throw err;
-         console.log("Record inserted Successfully");
-      });
+      // const users = db.collections('Jaxson.users');
+      // db.collection('Jaxson.users').insertOne(data, function (err) {
+      //    if (err) throw err;
+      //    console.log("Record inserted Successfully");
+      // });
+      // var query = {"email": data.signup_email}
+      var query = {"email": "corey@email.com"}
+      db.collection("Jaxson.users").find(query).toArray(function(err, result) {
+        if (err) throw err;
+        console.log(result);});
+      // var emailExists = users.findOne({"email": email});
+      // if (emailExists) {
+      //    console.log(`${email} used for existing user`)
+      // }
+      // else {
+      //    console.log(`${email} not found in database, continue to add user`)
+      // }
    } finally {
       // Ensures that the client will close when you finish/error
       client.close();
