@@ -7,7 +7,7 @@ const { MongoClient } = require("mongodb");
 const uuid = require('uuid').v4;
 const app = express();
 // session stoage for node - testing
-//const storage = require('node-sessionstorage');
+const storage = require('node-sessionstorage');
 
 app.use(express.static(__dirname + "/public"));
 app.use(express.static(__dirname + "/assets"));
@@ -60,7 +60,7 @@ app.post('/sign_up', function (req, res) {
             db.collection('Jaxson.users').insertOne(data, function (err) {
                if (err) throw err;
                console.log("Record inserted Successfully");
-               return res.redirect('./secretpages/secrethome.html');
+               return res.redirect('secrethome.html');
             });
          }
       });
@@ -85,11 +85,11 @@ app.post('/login', function (req, res) {
             console.log(`name= ${result[0].name}, email = ${result[0].email}, password = ${result[0].password}`);
             if (login_email == result[0].email && login_pass == result[0].password) {
                console.log(`password match (${login_pass}) for email address: ${login_email}!`)
-               // storage.setItem('username', login_name);
+               storage.setItem('username', login_name);
                // test we saved username
-               //let storedUsername = storage.getItem('username');
-               //console.log(`stored username: ${storedUsername}`);
-               return res.redirect('./secretpages/secrethome.html');
+               let storedUsername = storage.getItem('username');
+               console.log(`stored username: ${storedUsername}`);
+               return res.redirect('secrethome.html');
             }
             else {
                console.log(`password does not match for email: ${login_email}.\n
