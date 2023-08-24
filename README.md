@@ -9,3 +9,5 @@ This is a website my brother and I are making for family to see and interact wit
 - Review section is a place for us parents to leave highlights of our new journey with a newborn as he grows.
 
 ![Screenshot 2023-08-24 104922](https://github.com/JonnyRiver/jc-mtrx/assets/92954684/ef222e24-19b1-4b1f-93c7-5ea4a3d91ac0)
+
+![Screenshot 2023-08-24 105315](https://github.com/JonnyRiver/jc-mtrx/assets/92954684/4d1b0061-05e4-497d-a1d2-0148a3d2e73e)
